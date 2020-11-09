@@ -1,0 +1,6 @@
+1、Chinese Language Pack for Visual Studio Code
+2、CSS-in-JS
+3、Vim
+4、Visual Studio IntelliCode
+5、Live Server
+
