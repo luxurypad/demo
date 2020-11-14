@@ -9,7 +9,9 @@ const useStyles = createUseStyles({
       justifyContent: 'space-around',
       alignItems: 'center',
       '&>div': {
-        margin: '0.5rem'
+        margin: '0.5rem',
+        display:'flex', 
+        whiteSpace: 'nowrap',
       },
       '& input[name="age"]': {
         width: '5rem',
