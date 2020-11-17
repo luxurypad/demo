@@ -18,6 +18,20 @@ const useStyles = createUseStyles({
       marginLeft: '1rem',
       marginBottom: '.3rem',
       borderLeft: '.3rem solid #3498db'
+    },
+    '& p':{
+      margin: '1rem 0',
+    },
+    '& ul':{
+      paddingLeft: '2rem',
+      listStyle: 'disc',
+    },
+    '& ol':{
+      paddingLeft:'2rem',
+      listStyle:'decimal'
+    },
+    '& h1,h2,h3,h4,h5,h6':{
+      margin:'1rem 0'
     }
   }
 })
@@ -39,6 +53,7 @@ export default () => {
 
   return (
     <div className={classes.root}>
+      
       <ReactMarkdown plugins={[gfm]}>
         {data}
       </ReactMarkdown>

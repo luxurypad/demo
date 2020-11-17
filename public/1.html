@@ -16,6 +16,12 @@
 
   }
 
+  ol,
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
   #root2 {
     width: 100px;
     height: 100px;
@@ -30,9 +36,33 @@
 </style>
 
 <body>
-  
+  <p>Hello World</p>
+  <h1>h1</h1>
+  <h2>h2</h2>
+  <h3>h3</h3>
+  <h4>h4</h4>
+  <h5>h5</h5>
+  <h6>h6</h6>
   <input type="text" vlaue='true'>sdf
+
+  <ul>
+    <li>1</li>
+    <li>3</li>
+    <li>3</li>
+  </ul>
+  <ol>
+    <li>a</li>
+    <li>b</li>
+    <li>c</li>
+  </ol>
+
+
   <script type="module">
+    const p1=new Promise((resolve,reject)=>{
+      resolve(123)
+    })
+
+    console.log(p1)
    
   </script>
 </body>

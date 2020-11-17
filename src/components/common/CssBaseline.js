@@ -13,7 +13,7 @@ const useStyles = createUseStyles({
       margin: 0,
       padding: 0
     },
-    ul:{
+    'ul,ol':{
       listStyle: 'none',
     }
   }
