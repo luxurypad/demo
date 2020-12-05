@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^7.2.1",
     "json-server": "^0.16.2",
     "mockjs": "^1.1.0",
+    "multer": "^1.4.2",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "react-jss": "^10.4.0",
@@ -21,7 +22,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "json-server server/mock.js --port 5000 --static notes"
+    "server": "json-server server/mock.js --port 5000 --static notes",
+    "json-server": "node server/server.js"
   },
   "eslintConfig": {
     "extends": "react-app"
