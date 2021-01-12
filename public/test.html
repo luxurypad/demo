@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 0;
+      height: 0;
+      margin: 100px auto;
+      border-top: 50px solid transparent;
+      border-left: 50px solid transparent;
+      border-right: 50px solid blue;
+      border-bottom: 50px solid transparent;
+    }
+  </style>
+</head>
+<div>
+  dklfdf
+</div>
+
+<body>
+  <script type="module">
+    //生成长度为5的空数组，并填充2-32的不重复的随机数，需要使用递归的方式
+    const arr = new Array(5)
+    function randomArr(arr, i = 0) {
+      if (i <= 4) {
+        const number = Math.floor(Math.random() * 31 + 2)
+        if (arr.includes(number)) {
+          return randomArr(arr, i)
+        } else {
+          arr[i] = number
+          return randomArr(arr, i + 1)
+        }
+      } else {
+        return arr
+      }
+    }
+    console.log(randomArr(arr))
+  </script>
+  <script type="module">
+    //写一个方法去掉字符串中的空格，要求传入不同的类型分别能去掉前、后、前后、中间的空格
+    const str = '  ab c  def '
+    const newStr = str.replace(/\s+/g, '')
+    console.log(newStr)
+  </script>
+  <script type="module">
+    //去除字符串中最后一个指定的字符
+    const str = 'fldjlkhjo'
+    function delLast(str, del) {
+      // return str.replace(/j(?=[^j]*$)/,'')
+      return str.replace(new RegExp(`${del}(?=[^${del}]*$)`), '')
+    }
+    console.log(delLast(str, 'l'))
+  </script>
+  <script type="module">
+    //写一个方法把下划线命名转成大驼峰命名
+    function changeLine(str) {
+      const newStr = str.replace(/(_)(\w)/g, (match, p1, p2) => p2.toUpperCase())
+      return newStr
+    }
+    console.log(changeLine('lu_xu_ls_ffff_a'))
+  </script>
+  <script type="module">
+    //写一个把字符串大小写切换的方法
+    const str = 'AjkJLkkela'
+    const newStr = str.replace(/([a-z]*)([A-Z]*)/g, (match, p1, p2) => {
+      return `${p1.toUpperCase()}${p2.toLowerCase()}`
+    })
+    console.log(newStr)
+  </script>
+  <script type="module">
+    //统计某一字符或字符串在另一个字符串中出现的次数
+    function matchCount(str, target) {
+      const reg = new RegExp(target, 'g')
+      return str.match(reg).length
+    }
+
+    console.log(matchCount('fjkslkgkll', 'l'))
+  </script>
+  <script type="module">
+    toString.call() // "Array", "Function", "Object", "RegExp", "Date"
+    typeof obj // "Boolean", "Number", "String"
+  </script>
+</body>
+
+</html>
